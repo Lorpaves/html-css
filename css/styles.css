@@ -1,4 +1,4 @@
-/* TODO: root-color */
+/* TODO: Global Values */
 
 :root {
   --color-primary: #2584ff;
@@ -6,6 +6,8 @@
   --color-accent: #ff3400;
   --color-heading: #1b0760;
   --color-body: #918ca4;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 /* TODO: Universal Structure */
 *,
@@ -252,8 +254,8 @@ a {
 
 .input {
   padding: 1.5rem 3.5rem;
-  border: 1px solid #ccc;
-  border-radius: 30px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
   outline: 0;
   color: var(--color-heading);
   font-size: 2rem;
@@ -264,8 +266,30 @@ a {
   color: #cdcbd7;
 }
 
+/* TODO: group inputs and buttons */
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  /* NOTE: set the display to flex to make the nested input looks right */
+  display: flex;
+}
+
+.input-group .input {
+  /* NOTE: remove the nested input border */
+  border: 0;
+  /* NOTE: grow the nested input element */
+  flex-grow: 1;
+}
+.input-group .btn {
+  margin: 4px;
+}
+.input-group .input-icon {
+  margin: 0.4rem;
+  margin-left: 0;
+}
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
+    border-radius: var(--border-radius);
   }
 }
