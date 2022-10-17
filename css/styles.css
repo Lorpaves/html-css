@@ -7,6 +7,12 @@
   --color-heading: #1b0760;
   --color-body: #918ca4;
 }
+/* TODO: Universal Structure */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* TODO: Typography */
 
@@ -153,16 +159,11 @@ a {
 
 /* TODO: Icons */
 
-/* skin */
+/* structure */
 .icon {
   width: 40px;
   height: 40px;
 }
-.icon--primary {
-  fill: var(--color-primary);
-}
-
-/* structure */
 .icon-container {
   background: #20359f;
   width: 60px;
@@ -171,4 +172,78 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+/* skin */
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+/* TODO: Buttons */
+
+/* structure */
+.btn {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  /* remove the border */
+  border: 0;
+  border-radius: 40px;
+  /* 1rem vertical 0rem horizontal */
+  margin: 1rem 0;
+  cursor: pointer;
+  white-space: nowrap;
+  /* NOTE: set the label of the botton to center */
+  text-align: center;
+}
+
+/* skin */
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #3a8ffd;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: #00c8eb;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: #ec3000;
+}
+
+.btn--outline {
+  background: #fff;
+  color: var(--color-heading);
+  border: 2px solid var(--color-heading);
+  transition: background 0.3s;
+}
+
+.btn--outline:hover {
+  background: var(--color-heading);
+  color: #fff;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
