@@ -230,6 +230,16 @@ a {
   background: #00c8eb;
 }
 
+.btn--black {
+  background: #111;
+  color: #fff;
+  transition: background 0.8s;
+}
+
+.btn--black:hover {
+  background: rgb(102, 102, 102);
+}
+
 .btn--accent {
   background: var(--color-accent);
   color: #fff;
@@ -633,7 +643,7 @@ a {
   color: #222;
 }
 
-.block--skewed-right {
+/* .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
 }
@@ -641,6 +651,11 @@ a {
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+} */
+
+.block--skewed-circle {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: circle(50% at 50% 50%);
 }
 
 .container {
@@ -709,3 +724,38 @@ a {
     border: 0;
   }
 }
+
+/* TODO: Heros */
+.hero__tagline {
+  font-size: 2rem;
+  color: rgb(91, 91, 91);
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+.hero__image {
+  width: 100%;
+  margin-left: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
+  .hero__image {
+    /* width: 120%;
+    height: 100%; */
+    margin-left: 5rem;
+  }
+}
+
+/* @media screen and (min-width: 768px) {
+  .hero__image {
+    margin-top: -2rem;
+    width: 95%;
+  }
+} */
