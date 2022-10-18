@@ -359,6 +359,33 @@ a {
 
 .plan--popular .card__header::before {
   content: url(../images/popular.svg);
-  width: 20%;
+  width: 60px;
+  height: 60px;
   display: inline-block;
+  position: absolute;
+  /* margin-top: -0.5%;
+  margin-left: 92.5%; */
+
+  /* NOTE: use the top and right attribute to make sure the icon visible */
+  top: 4%;
+  right: 1%;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    /* 14px */
+    font-size: 1.4rem;
+  }
+  .plan__price {
+    /* 50px */
+    font-size: 5rem;
+  }
+  .plan__billing-cycle {
+    /* 16px */
+    font-size: 1.6rem;
+  }
+  .plan__description {
+    /* 17px */
+    font-size: 1.7rem;
+  }
 }
