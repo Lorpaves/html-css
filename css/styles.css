@@ -266,11 +266,11 @@ a {
   background: #fff;
   color: var(--color-heading);
   border: 2px solid var(--color-heading);
-  transition: background 0.3s;
+  transition: background 0.6s;
 }
 
 .btn--outline:hover {
-  background: var(--color-heading);
+  background: #000;
   color: #fff;
 }
 
@@ -354,7 +354,7 @@ a {
 
 /* skin */
 .card--primary .card__header {
-  background: var(--color-primary);
+  background: #111;
   color: #fff;
 }
 .card--secondary .card__header {
@@ -365,8 +365,15 @@ a {
   background: var(--color-accent);
   color: #fff;
 }
+.card--primary .badge--primary {
+  background: #126de4;
+}
 
 /* TODO: Plans */
+.plan {
+  transition: transform 0.3s ease-in;
+}
+
 .plan__name {
   color: #fff;
   margin: 0;
@@ -396,6 +403,10 @@ a {
   margin-bottom: 2rem;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -411,8 +422,16 @@ a {
   margin-left: 92.5%; */
 
   /* NOTE: use the top and right attribute to make sure the icon visible */
-  top: 4%;
+  top: -1%;
   right: 1%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -791,4 +810,16 @@ a {
     /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
     grid-template-columns: repeat(6, 1fr);
   }
+}
+
+/* TODO: Plans Block */
+
+.block-plans .grid {
+  /* set the space between each element of a grid */
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 50rem;
+  margin: 0 auto;
 }
