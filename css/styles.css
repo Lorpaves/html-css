@@ -75,7 +75,7 @@ a {
 }
 
 .link-arrow {
-  color: var(--color-accent);
+  color: rgb(211, 67, 27);
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
@@ -321,7 +321,8 @@ a {
   padding: 2rem 3rem;
   flex-grow: 1;
   /* NOTE: Fixed */
-  width: 100%;
+  /* or width: 100% */
+  width: 0;
 
   font-size: 2rem;
 }
@@ -544,8 +545,13 @@ a {
   padding: 3rem;
 }
 
+.testimonial .quote {
+  justify-self: center;
+  align-self: center;
+}
 .testimonial__image {
   position: relative;
+  width: 80%;
 }
 
 .testimonial__image > .icon-container {
@@ -574,12 +580,20 @@ a {
 /* TODO: Callouts */
 .callout {
   /* border: 1px solid black; */
-  padding: 4rem;
-  border-radius: 0.5rem;
+  padding: 2rem;
+  border-radius: 0.8rem;
 }
-
+.container.callout--block {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-content: center;
+  position: relative;
+}
 .callout--primary {
   background: var(--color-primary);
+  z-index: 1;
 }
 
 .callout__heading {
@@ -712,7 +726,7 @@ a {
 
 /* TODO: Navigation Bar */
 .nav {
-  background: #000;
+  background: rgba(38, 38, 38, 0.821);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -808,7 +822,7 @@ a {
 
 .block-language__names {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -859,6 +873,40 @@ a {
   .feature:nth-of-type(even) .feature__content {
     order: 2;
   }
+}
+
+/* TODO: Medias Blocks */
+
+.medias {
+  background: rgb(168, 168, 168);
+  padding: 2rem;
+}
+.medias .grid--1x2 {
+  text-align: center;
+}
+.medias .media__text {
+  color: #fff;
+  padding-top: 1.2rem;
+}
+
+.medias .icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .medias__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.medias__image img {
+  width: 80%;
+  border-radius: 2rem;
+  justify-self: center;
 }
 
 /* TODO: Footers */
