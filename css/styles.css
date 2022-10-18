@@ -250,6 +250,11 @@ a {
   color: #fff;
 }
 
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .btn--block {
   width: 100%;
   display: inline-block;
@@ -515,5 +520,58 @@ a {
 
   .testimonial .quote {
     margin-left: 6rem;
+  }
+}
+
+/* TODO: Callouts */
+.callout {
+  /* border: 1px solid black; */
+  padding: 4rem;
+  border-radius: 0.5rem;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+}
+
+.callout__heading {
+  color: white;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout__text {
+  color: white;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+/* .grid {
+  display: grid;
+  ## horizontal alignment
+  justify-items: center;
+  ##vertical alignment
+  ##the default value is stretch
+  align-items: center;
+} */
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    /* auto: set the second column width to the rest size of 1fr from the first columns */
+    grid-template-columns: 1fr auto;
+  }
+  .callout__content {
+    text-align: left;
+  }
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
