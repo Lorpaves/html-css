@@ -169,13 +169,13 @@ a {
 
 /* structure */
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 }
 .icon-container {
-  background: #20359f;
-  width: 60px;
-  height: 60px;
+  background: #79797948;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -320,6 +320,8 @@ a {
   /* NOTE: grow the nested input element */
   padding: 2rem 3rem;
   flex-grow: 1;
+  /* NOTE: Fixed */
+  width: 100%;
 
   font-size: 2rem;
 }
@@ -822,4 +824,29 @@ a {
 .block-plans .card {
   max-width: 50rem;
   margin: 0 auto;
+}
+
+/* TODO: Features */
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
 }
