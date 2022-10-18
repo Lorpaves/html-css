@@ -361,6 +361,7 @@ a {
   content: url(../images/popular.svg);
   width: 60px;
   height: 60px;
+  /* NOTE: use the inline-block display to make the width attribute works */
   display: inline-block;
   position: absolute;
   /* margin-top: -0.5%;
@@ -388,4 +389,21 @@ a {
     /* 17px */
     font-size: 1.7rem;
   }
+}
+
+/* TODO: Media */
+.media {
+  display: flex;
+}
+
+.media__title {
+  margin-top: 0;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__image {
+  margin-top: 1.5rem;
 }
