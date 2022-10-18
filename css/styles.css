@@ -597,7 +597,7 @@ a {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 /* add the expanded style */
 .collapsible--expanded .collapsible__home {
@@ -607,4 +607,66 @@ a {
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
+}
+
+/* TODO: Navigation Bar */
+.nav {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 1rem;
+  align-items: center;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 1.5rem 2rem;
+  border: 1px solid #222;
+}
+
+.nav__item > a {
+  color: whitesmoke;
+  transition: color 0.3s;
+}
+.nav__item > a:hover {
+  color: rgb(216, 95, 43);
+}
+
+.nav__toggler {
+  opacity: 0.6;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+/* select both nav and collapsible class */
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+.nav__logo {
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.5rem;
+    /* make the navigation bar list item visible */
+    max-height: 100%;
+    opacity: 1;
+  }
+  .nav__item {
+    border: 0;
+  }
 }
